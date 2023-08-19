@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data</title>
+</head>
+<body>
+    <h1 id="ptlistHeader">Patient Records</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Reason For Visit</th>
+                    <th>Blood Work</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% patients.forEach(patient => { %>
+                    <tr class="ptinfo">
+                        <td><%= patient.name %></td>
+                        <td><%= patient.dateOfBirth %></td>
+                        <td><%= patient.reasonOfVisit %></td>
+                        <td><%= patient.bloodWork %></td>
+                        <td>
+                            <!-- Link to the Edit page for the specific patient using their ID -->
+                            <a href="/edit-patient/<%= patient._id %>">Edit</a>
+                        </td>
+                        <td>
+                            <!-- Form to Delete the specific patient using their ID -->
+                            <form action="/delete-patient/<%= patient._id %>" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/*HOME PAGE */
+#home_header {
+    color: #2699f1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased; /* For Webkit browsers, like Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale;  /* For Firefox */
+}
+    
+
+.landing {
+    border-top: 4px solid #333; 
+    position: relative; /* This allows for absolute positioning within .landing */
+}
+
+.landing a {
+    position: absolute; /* Take the button out of the regular flow and position it relative to the .landing container */
+    top: 70px; /* This moves the button upwards so that half of it is above the border. Adjust the pixel value based on the size of your button */
+    right: 50%; /* Center the button horizontally */
+    transform: translateX(50%); /* Fine-tune centering of the button */
+}
+
+
+/* PT LIST PAGE */
+#ptlistHeader {
+    color: #71b3e6;
+    text-align: center;
+}
+
+/* This will apply styles to the entire table */
+table {
+    width: 100%; /* Make the table take the full width of its container */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin: 20px 0; /* Add some margin to the top and bottom of the table */
+}
+
+/* This will style the table header */
+thead th {
+    background-color: #71b3e6; /* Light gray background */
+    padding: 10px; /* Add some padding for better spacing */
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: left; /* Align text to the left */
+}
+
+/* This will style each table cell */
+tbody td {
+    padding: 8px; /* Add some padding for better spacing */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Add a hover effect for each table row */
+tbody tr:hover {
+    background-color: #f5f5f5; /* Lighter gray background on hover */
+}
+
+.table-container {
+    overflow-x: auto; /* Horizontal scrolling when the content overflows */
+}
