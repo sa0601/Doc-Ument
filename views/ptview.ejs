@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient View</title>
+    <link rel="stylesheet" href="path_to_your_css_file.css"> <!-- Assuming you have a CSS file -->
+</head>
+
+<body>
+
+    <div class="ptviewBigBody">
+        <div class="ptviewBody">
+            <h1><%=patient.name%></h1>
+            <div>
+                Patient ID: <%= patient.pID %>
+            </div>
+            <div>
+                Date of Birth: <%= patient.dateOfBirth %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                Reason of Visit: <%= patient.reasonOfVisit %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                Insurance: <%= patient.insurance %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                Bloodwork: <%= patient.bloodWork %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                X-Ray: <%= patient.xRay %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                MRI: <%= patient.mRI %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <div>
+                CT: <%= patient.cT %> <!-- Assuming there's a name field in your schema -->
+            </div>
+            <!-- Add more patient details as required -->
+            <div class="ptviewbtns">                
+                <a href="/logout" class="btn">
+                    <button>Log Out</button>
+                </a>
+            </div>
+        </div>
+       
+    </div>
+    
+
+</body>
+
+</html>

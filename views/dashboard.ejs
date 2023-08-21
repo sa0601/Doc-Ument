@@ -1,5 +1,18 @@
-<h1>Welcome <%=Doctor.name%></h1>
+<div id="docDashboard">
 
-<a href="/patients">
-    <button>Patient Database</button>
-</a>
+    <h1 class="docDashHeader">Welcome <%= Doctor && Doctor.name ? Doctor.name : 'Doctor' %></h1>
+    
+    <div class="buttons-container">
+        <a href="/patients" class="btn">
+            <button>Patient Database</button>
+        </a>
+        
+        <a href="/newpt" class="btn">
+            <button>Log Patient</button>
+        </a>
+        
+        <a href="/logout" class="btn">
+            <button>Log Out</button>
+        </a>
+    </div>
+</div>

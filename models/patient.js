@@ -3,14 +3,15 @@ const { Schema } = mongoose;
 
 const ptSchema = new Schema ({
     //defne each key for our models
+    pID: String,
     name: String,
-    dateOfBirth: Date,
+    dateOfBirth: String,
     reasonOfVisit: String,
     insurance: String,
-    bloodWork: Boolean,
-    xRay: Boolean,
-    mRI: Boolean,
-    cT: Boolean
+    bloodWork: String,
+    xRay: String,
+    mRI: String,
+    cT: String
 });
 
 const Patient = mongoose.model("Patient", ptSchema);

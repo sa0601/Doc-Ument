@@ -1,0 +1,40 @@
+<form action="/edit-patient/<%= patient._id %>" method="post">
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= patient.name %>" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" name="dateOfBirth" value="<%= patient.dateOfBirth %>" required>
+
+    <label for="reasonOfVisit">Reason of Visit:</label>
+    <input type="text" name="reasonOfVisit" value="<%= patient.reasonOfVisit %>" required>
+
+    <label for="insurance">Insurance:</label>
+    <input type="text" name="insurance" value="<%= patient.insurance %>">
+
+    <label for="bloodWork">Blood Work:</label>
+    <input type="checkbox" name="bloodWork" value="on" <%= patient.bloodWork === "Done" ? "checked" : "" %>>
+
+    <label for="xRay">X-Ray:</label>
+    <input type="checkbox" name="xRay" value="on" <%= patient.xRay === "Done" ? "checked" : "" %>>
+
+    <label for="mRI">MRI:</label>
+    <input type="checkbox" name="mRI" value="on" <%= patient.mRI === "Done" ? "checked" : "" %>>
+
+    <label for="cT">CT:</label>
+    <input type="checkbox" name="cT" value="on" <%= patient.cT === "Done" ? "checked" : "" %>>
+
+    <button type="submit">Update</button>
+</form>
+
+
+<div id="newptbtn">
+    <div class="buttons-container">
+        <a href="/logout" class="btn">
+            <button>Log Out</button>
+        </a>
+        <a href="/dashboard" class="btn">
+            <button>Home</button>
+        </a>
+    </div>
+</div>

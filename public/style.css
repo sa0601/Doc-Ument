@@ -1,6 +1,42 @@
 /*HOME PAGE */
+.content-wrapper {
+    background-color: #8fdbde;
+}
+
+
+/* HOMEPAGE BTN */
+
+.homebtn {
+    background: linear-gradient(to right, #1a8cfe, #a0c4ed); /* gradient background */
+    border: none; /* remove any default borders */
+    color: #fff; /* white text color */
+    padding: 10px 25px; /* button padding */
+    border-radius: 25px; /* rounded corners */
+    font-weight: 600; /* bold font */
+    cursor: pointer; /* hand cursor on hover */
+    transition: all 0.3s ease; /* smooth transition for hover effects */
+    font-family: 'Arial', sans-serif; /* change to a font of your choice */
+}
+
+.homebtn:hover {
+    background: linear-gradient(to right, #a0c4ed, #1a8cfe); /* flip gradient colors */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow on hover */
+}
+
+.homebtn:focus {
+    outline: none; /* remove default browser outline */
+}
+
+.homehr {
+    width: 80%; /* adjust as needed */
+    border: 0; 
+    height: 1px;
+    background: #464646; /* color of the line */
+    margin: 20px auto; /* 20px top and bottom, auto left and right for centering */
+}
+
 #home_header {
-    color: #2699f1;
+    color: #ffffff;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased; /* For Webkit browsers, like Chrome and Safari */
@@ -8,51 +44,218 @@
 }
     
 
-.landing {
-    border-top: 4px solid #333; 
-    position: relative; /* This allows for absolute positioning within .landing */
+.content-wrapper {
+    display: flex;            /* Keep the children side by side */
+    height: 100vh;            /* Viewport height */
+    background: white;        /* Setting background to white */
+    border-radius: 20px;
 }
+
+.landing {
+    flex: 1; /* You can reduce this value to give this section less space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8fdbde;
+}
+
+.img-container {
+    flex: 1.5;                  /* Makes the img-container take up half the space */
+    display: flex;            /* Center the image both horizontally and vertically */
+    justify-content: center;  /* Align content horizontally to the center */
+    align-items: center;      /* Align content vertically to the center */
+    background-color: #8fdbde;
+}
+
+.landing-image {
+    width: 80%; /* Adjust this value to change the size of the image */
+    max-width: 1000px; /* Optional: this ensures the image doesn't get too big. Adjust as needed. */
+}
+
+
+.landing .button-wrapper {
+    /* remove position: absolute; */
+    text-align: center; /* To center the buttons */
+    padding: 70px 0;    /* To give space above and below the buttons */
+}
+
+
 
 .landing a {
-    position: absolute; /* Take the button out of the regular flow and position it relative to the .landing container */
-    top: 70px; /* This moves the button upwards so that half of it is above the border. Adjust the pixel value based on the size of your button */
-    right: 50%; /* Center the button horizontally */
-    transform: translateX(50%); /* Fine-tune centering of the button */
+    display: inline-block;
+    margin-right: 10px;
 }
 
+/* DOCTOR LOGIN */
+
+.docLogin {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    color: white;
+}
+
+#docLoginHeader {
+    font-size: 2em; 
+    margin-bottom: 20px; 
+    color: rgb(12, 61, 239);
+    font-family: Roboto;
+    -webkit-font-smoothing: antialiased; /* For Webkit browsers, like Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale;  /* For Firefox */
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.form input, .form button {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px; 
+    box-sizing: border-box;
+}
+
+.form button {
+    background-color: #007BFF;
+    color: #FFF;
+    cursor: pointer;
+    border: none;
+}
+
+
+.form button:hover {
+    background-color: #0056b3; 
+}
+
+/* DOC DASHBOARD */
+#docDashboard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/premium-photo/top-view-assortment-medical-supplies-apple_23-2148439080.jpg?w=740');
+    background-size: cover;
+    background-position: center;
+}
+.docDashHeader {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: Roboto;
+    color: white;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons-container a {
+    text-decoration: none;
+}
+
+.buttons-container a button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 1.2em;
+}
 
 /* PT LIST PAGE */
 #ptlistHeader {
-    color: #71b3e6;
+    color: white;
     text-align: center;
+    font-family: Roboto;
 }
 
-/* This will apply styles to the entire table */
 table {
-    width: 100%; /* Make the table take the full width of its container */
-    border-collapse: collapse; /* Remove spacing between table cells */
-    margin: 20px 0; /* Add some margin to the top and bottom of the table */
+    width: 100%; 
+    border-collapse: collapse;
+    margin: 20px 0; 
 }
 
-/* This will style the table header */
+.tableTitle {
+    color: white;
+    font-family: Roboto;
+}
+
+
 thead th {
-    background-color: #71b3e6; /* Light gray background */
-    padding: 10px; /* Add some padding for better spacing */
-    border: 1px solid #ddd; /* Light gray border */
-    text-align: left; /* Align text to the left */
+    background-color: #71b3e6; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    text-align: left; 
 }
 
-/* This will style each table cell */
 tbody td {
-    padding: 8px; /* Add some padding for better spacing */
-    border: 1px solid #ddd; /* Light gray border */
+    padding: 8px; 
+    border: 1px solid #ddd; 
 }
 
-/* Add a hover effect for each table row */
+
 tbody tr:hover {
-    background-color: #f5f5f5; /* Lighter gray background on hover */
+    background-color: #f5f5f5; 
+}
+.table-container {
+    overflow-x: auto; 
 }
 
-.table-container {
-    overflow-x: auto; /* Horizontal scrolling when the content overflows */
+.ptlistbtns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.ptlistbtn {
+    padding: 8px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* PT VIEW */
+.ptviewBody {
+    display: flex;
+    flex-direction: column; /* This makes the items stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    width: 100%; /* Ensure it takes the full width of its container */
+    font-size: 25px;
+}
+
+.ptviewBody div {
+    margin-bottom: 20px;
+}
+
+.ptviewBody h1 {
+    margin-bottom: 30px;
+}
+
+.ptviewBigBody {
+    background-image: url('https://img.freepik.com/premium-vector/technology-connection-digital-data-white-background_32996-546.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #65b0bf;
+    text-align: center;
+    color: #65b0bf;  /* Assuming white text will look good against this background, adjust as necessary */
+    height: 100vh; /* This ensures the body takes up the full viewport height, which can help with background image scaling */
+}
+
+/* PT CR8 */
+#newptbtn {
+    margin-top: 20px;
+    padding-bottom: 20px;
 }

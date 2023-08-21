@@ -28,6 +28,7 @@ router.post("/login", async (req, res) => {
         if (result) {
             req.session.userId = docToLogin._id;
             req.session.name = docToLogin.name;
+            req.session.doctor = docToLogin;
 
             const patients = await Patient.find();
             return res.render("dashboard", { Doctor: docToLogin, patients: patients });
@@ -56,6 +57,11 @@ router.post("/signup", async (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('auth/signup');
+});
+
+router.get('/logout', (req, res) => {
+    req.session.destroy(); // Destroy the session
+    res.redirect('/'); // Redirect to login page
 });
 
 module.exports = router;

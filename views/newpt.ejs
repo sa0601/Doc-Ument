@@ -1,0 +1,42 @@
+<form action="/newpt" method="post">
+
+    <label for="name">Patient ID:</label>
+    <input type="text" name="pID" required>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" name="dateOfBirth" required>
+
+    <label for="reasonOfVisit">Reason of Visit:</label>
+    <input type="text" name="reasonOfVisit" required>
+
+    <label for="insurance">Insurance:</label>
+    <input type="text" name="insurance">
+
+    <label for="bloodWork">Blood Work:</label>
+    <input type="checkbox" name="bloodWork" value="on">
+
+    <label for="xRay">X-Ray:</label>
+    <input type="checkbox" name="xRay" value="on">
+
+    <label for="mRI">MRI:</label>
+    <input type="checkbox" name="mRI" value="on">
+
+    <label for="cT">CT:</label>
+    <input type="checkbox" name="cT" value="on">
+
+    <button type="submit">Submit</button>
+</form>
+    
+<div id="newptbtn">
+    <div class="buttons-container">
+        <a href="/logout" class="btn">
+            <button>Log Out</button>
+        </a>
+        <a href="/dashboard" class="btn">
+            <button>Home</button>
+        </a>
+    </div>
+</div>
