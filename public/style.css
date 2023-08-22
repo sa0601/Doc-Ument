@@ -7,52 +7,52 @@
 /* HOMEPAGE BTN */
 
 .homebtn {
-    background: linear-gradient(to right, #1a8cfe, #a0c4ed); /* gradient background */
-    border: none; /* remove any default borders */
-    color: #fff; /* white text color */
-    padding: 10px 25px; /* button padding */
-    border-radius: 25px; /* rounded corners */
-    font-weight: 600; /* bold font */
-    cursor: pointer; /* hand cursor on hover */
-    transition: all 0.3s ease; /* smooth transition for hover effects */
-    font-family: 'Arial', sans-serif; /* change to a font of your choice */
+    background: linear-gradient(to right, #1a8cfe, #a0c4ed); 
+    border: none; 
+    color: #fff; 
+    padding: 10px 25px; 
+    border-radius: 25px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .homebtn:hover {
-    background: linear-gradient(to right, #a0c4ed, #1a8cfe); /* flip gradient colors */
-    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* subtle shadow on hover */
+    background: linear-gradient(to right, #a0c4ed, #1a8cfe);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
 }
 
 .homebtn:focus {
-    outline: none; /* remove default browser outline */
+    outline: none; 
 }
 
 .homehr {
-    width: 80%; /* adjust as needed */
+    width: 80%; 
     border: 0; 
     height: 1px;
-    background: #464646; /* color of the line */
-    margin: 20px auto; /* 20px top and bottom, auto left and right for centering */
+    background: #464646; 
+    margin: 20px auto; 
 }
 
 #home_header {
     color: #ffffff;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased; /* For Webkit browsers, like Chrome and Safari */
-    -moz-osx-font-smoothing: grayscale;  /* For Firefox */
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;  
 }
     
 
 .content-wrapper {
-    display: flex;            /* Keep the children side by side */
-    height: 100vh;            /* Viewport height */
-    background: white;        /* Setting background to white */
+    display: flex;            
+    height: 100vh;            
+    background: white;        
     border-radius: 20px;
 }
 
 .landing {
-    flex: 1; /* You can reduce this value to give this section less space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,23 +61,22 @@
 }
 
 .img-container {
-    flex: 1.5;                  /* Makes the img-container take up half the space */
-    display: flex;            /* Center the image both horizontally and vertically */
-    justify-content: center;  /* Align content horizontally to the center */
-    align-items: center;      /* Align content vertically to the center */
+    flex: 1.5;                  
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
     background-color: #8fdbde;
 }
 
 .landing-image {
-    width: 80%; /* Adjust this value to change the size of the image */
-    max-width: 1000px; /* Optional: this ensures the image doesn't get too big. Adjust as needed. */
+    width: 80%; 
+    max-width: 1000px; 
 }
 
 
 .landing .button-wrapper {
-    /* remove position: absolute; */
-    text-align: center; /* To center the buttons */
-    padding: 70px 0;    /* To give space above and below the buttons */
+    text-align: center; 
+    padding: 70px 0;    
 }
 
 
@@ -104,8 +103,8 @@
     margin-bottom: 20px; 
     color: rgb(12, 61, 239);
     font-family: Roboto;
-    -webkit-font-smoothing: antialiased; /* For Webkit browsers, like Chrome and Safari */
-    -moz-osx-font-smoothing: grayscale;  /* For Firefox */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
 }
 
 
@@ -215,23 +214,34 @@ tbody tr:hover {
     gap: 15px;
 }
 
-.ptlistbtn {
+.ptlistbtn button {
     padding: 8px 12px;
     font-size: 1em;
     cursor: pointer;
     border: none;
+    background-color: #007BFF; 
+    color: #FFF;               
+    border-radius: 5px;      
+    transition: background-color 0.3s; 
+    outline: none;             
 }
+
+.ptlistbtn button:hover {
+    background-color: #0056b3; 
+}
+
+
 
 
 /* PT VIEW */
 .ptviewBody {
     display: flex;
-    flex-direction: column; /* This makes the items stack vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    width: 100%; /* Ensure it takes the full width of its container */
+    width: 100%; 
     font-size: 25px;
 }
 
@@ -250,12 +260,89 @@ tbody tr:hover {
     background-position: center center;
     background-color: #65b0bf;
     text-align: center;
-    color: #65b0bf;  /* Assuming white text will look good against this background, adjust as necessary */
-    height: 100vh; /* This ensures the body takes up the full viewport height, which can help with background image scaling */
+    color: #65b0bf;  
+    height: 100vh; 
+}
+/* PT CR8 */
+newptbody {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4;     
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* PT CR8 */
+
+newform {
+    background-color: #fff;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 60%;              
+    max-width: 500px;       
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;              
+}
+
+label {
+    margin-bottom: 5px;      
+    font-weight: bold;       
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;            
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;      
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 #newptbtn {
     margin-top: 20px;
-    padding-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons-container a {
+    text-decoration: none;
+}
+
+.buttons-container button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #007BFF;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.buttons-container button:hover {
+    background-color: #0056b3;
 }
