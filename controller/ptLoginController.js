@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const Ptlogin = require('../models/ptLogin.js'); // Make sure the path is correct
+const Ptlogin = require('../models/ptLogin.js'); 
 
-// Render the patient login form
+
 router.get("/ptlogin-form", (req, res) => {
     res.render('auth/ptlogin');
 });
 
-// Handle patient login
+
 router.post("/patient-login", async (req, res) => {
     const { username, password } = req.body;
     const patient = await Ptlogin.findOne({ username });
@@ -21,7 +21,7 @@ router.post("/patient-login", async (req, res) => {
     }
 });
 
-// Render patient dashboard
+
 router.get("/patient-dashboard", (req, res) => {
     if (req.session && req.session.patient) {
         res.redirect(`/ptview/${req.session.patient.pID}`);
@@ -30,9 +30,7 @@ router.get("/patient-dashboard", (req, res) => {
     }
 });
 
-// ... Previous imports and other routes
 
-// Render the patient signup form
 router.get("/ptsignup", (req, res) => {
     res.render('auth/ptsignup');
 });
@@ -59,8 +57,8 @@ router.post("/ptsignup", async (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-    req.session.destroy(); // Destroy the session
-    res.redirect('/'); // Redirect to the home page
+    req.session.destroy(); 
+    res.redirect('/'); 
 });
 
 module.exports = router;

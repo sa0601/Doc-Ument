@@ -1,4 +1,3 @@
-//using express router to attach routes and export them
 const express = require('express');
 const router = express.Router();
 const bcrypt = require("bcrypt");
@@ -60,8 +59,8 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-    req.session.destroy(); // Destroy the session
-    res.redirect('/'); // Redirect to login page
+    req.session.destroy(); 
+    res.redirect('/'); 
 });
 
 module.exports = router;

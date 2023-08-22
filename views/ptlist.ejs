@@ -38,15 +38,12 @@
                         <td><%=patient.mRI%></td>
                         <td><%=patient.cT%></td>
                         <td>
-                            <!-- Link to the View Details page for the specific patient using their pID -->
                             <a href="/ptview/<%= patient.pID %>">View Details</a>
                         </td>
                         <td>
-                            <!-- Link to the Edit page for the specific patient using their ID -->
                             <a href="/edit-patient/<%= patient._id %>">Edit</a>
                         </td>
                         <td>
-                            <!-- Form to Delete the specific patient using their ID -->
                             <form action="/delete-patient/<%= patient._id %>?_method=DELETE" method="POST">
                                 <button type="submit">Delete</button>
                             </form>

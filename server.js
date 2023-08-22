@@ -19,8 +19,8 @@ app.set('view engine', 'ejs');
 
 //MIDDLEWARE
 app.use(cors());
-app.use(expressEjsLayouts); //looks for a file named Layout.ejs
-app.use(express.urlencoded({ extended: true})); //allows form data -- posts from Postman will populate in console instead of showing as "undefined"
+app.use(expressEjsLayouts); 
+app.use(express.urlencoded({ extended: true})); 
 app.use(session({ secret: 'somestringrandomdwd', cookie: {maxAge: 3600000 }}));
 app.use(express.json()); //allows us to to create key/values in Postman in an object forman in the "raw" section - DOUBLE QUOTES MUST BE USED FOR JSON
 app.use(express.static("public"));
@@ -46,7 +46,7 @@ app.get("/newpt", async (req, res) => {
 
 //DELETE
 app.delete("/delete-patient/:id", async (req, res) => {
-    // get the id from params
+    
     const id = req.params.id;
     await Patient.findByIdAndRemove(id)
     res.redirect('/patients');
@@ -70,7 +70,6 @@ app.delete("/delete-patient/:id", async (req, res) => {
 app.post("/newpt", async (req, res) => {
     console.log(req.body);
 
-    // Convert checkbox values to "Done" or "Not Done"
     req.body.bloodWork = req.body.bloodWork ? "Done" : "Not Done";
     req.body.xRay = req.body.xRay ? "Done" : "Not Done";
     req.body.mRI = req.body.mRI ? "Done" : "Not Done";
@@ -106,7 +105,7 @@ app.get("/dashboard", async (req, res) => {
 app.get("/ptview/:pID", async (req, res) => {
     const pID = req.params.pID;
 
-    // Fetch patient data based on pID from the database
+
     let patientData = await Patient.findOne({ pID: pID });
 
     if (patientData) {
